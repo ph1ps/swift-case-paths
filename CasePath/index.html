@@ -263,7 +263,8 @@ value.</p>
         <code><a href="#casepath.`case`(_:)">`case`(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">`case`</span>(<span class="keyword">_</span> <span class="variable">embed</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Value</span>) -&gt; <span class="type">Root</span>) -&gt; <a href="/swift-case-paths/CasePath"><span class="type">CasePath</span></a>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">"Use case path literal syntax (e.g., '/Root.caseName')"</span>)
+  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">`case`</span>(<span class="keyword">_</span> <span class="variable">embed</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Value</span>) -&gt; <span class="type">Root</span>) -&gt; <a href="/swift-case-paths/CasePath"><span class="type">CasePath</span></a>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Returns a case path that extracts values associated with a given enum case initializer.</p>
@@ -398,7 +399,7 @@ value type of another case path.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-07-13T16:13:01+0000">July 13, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-07-22T14:54:56+0000">July 22, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
