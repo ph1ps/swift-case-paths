@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#casepath.init(embed:extract:)">init(embed:​extract:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#casepath.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#casepath.embed(_:)">embed(_:​)</a></li><li class="function"><a href="#casepath.extract(from:)">extract(from:​)</a></li><li class="function"><a href="#casepath.appending(path:)">appending(path:​)</a></li><li class="function"><a href="#casepath.`case`(_:)">`case`(_:​)</a></li><li class="function"><a href="#casepath...(lhs:rhs:)">.​.​(lhs:​rhs:​)</a></li><li class="function"><a href="#casepath...(lhs:rhs:)">.​.​(lhs:​rhs:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#casepath.init(embed:extract:)">init(embed:​extract:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#casepath.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#casepath.embed(_:)">embed(_:​)</a></li><li class="function"><a href="#casepath.extract(from:)">extract(from:​)</a></li><li class="function"><a href="#casepath.modify(_:_:)">modify(_:​_:​)</a></li><li class="function"><a href="#casepath.appending(path:)">appending(path:​)</a></li><li class="function"><a href="#casepath.`case`(_:)">`case`(_:​)</a></li><li class="function"><a href="#casepath...(lhs:rhs:)">.​.​(lhs:​rhs:​)</a></li><li class="function"><a href="#casepath...(lhs:rhs:)">.​.​(lhs:​rhs:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -215,8 +215,45 @@ value.</p>
   </tbody>
 </table>
   <h4>Returns</h4>
-  <p>A value iff it can be extracted from the given root, otherwise <code>nil</code>.</p>
+  <p>A value if it can be extracted from the given root, otherwise <code>nil</code>.</p>
 
+</div>
+<div role="article" class="function" id="casepath.modify(_:_:)">
+    <h3>
+        <code><a href="#casepath.modify(_:_:)">modify(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">modify</span>(<span class="keyword">_</span> <span class="variable">root</span>: <span class="keyword">inout</span> <span class="type">Root</span>, <span class="keyword">_</span> <span class="variable">update</span>: (<span class="keyword">inout</span> <span class="type">Value</span>) <span class="keyword">throws</span> -&gt; <span class="type">Void</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Attempts to modify a value in a root.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>root</th>
+    <td><code class="type">inout Root</code></td>
+    <td><p>A root to modify if the case path matches.</p>
+</td>
+</tr>
+<tr>
+    <th>update</th>
+    <td><code class="type">(inout Value) throws -&gt; Void</code></td>
+    <td><p>A closure that can mutate the case's associated value. If the closure throws, the root will be left unmodified.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="function" id="casepath.appending(path:)">
     <h3>
@@ -399,7 +436,7 @@ value type of another case path.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-07-24T15:23:01+0000">July 24, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-07-29T16:27:52+0000">July 29, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
