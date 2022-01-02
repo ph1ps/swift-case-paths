@@ -223,7 +223,10 @@ value.</p>
         <code><a href="#casepath.modify(_:_:)">modify(_:​_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">modify</span>(<span class="keyword">_</span> <span class="variable">root</span>: <span class="keyword">inout</span> <span class="type">Root</span>, <span class="keyword">_</span> <span class="variable">update</span>: (<span class="keyword">inout</span> <span class="type">Value</span>) <span class="keyword">throws</span> -&gt; <span class="type">Void</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">modify</span>&lt;<span class="variable">Result</span>&gt;(
+    <span class="keyword">_</span> <span class="variable">root</span>: <span class="keyword">inout</span> <span class="type">Root</span>,
+    <span class="keyword">_</span> <span class="variable">body</span>: (<span class="keyword">inout</span> <span class="type">Value</span>) <span class="keyword">throws</span> -&gt; <span class="type">Result</span>
+  ) <span class="keyword">throws</span> -&gt; <span class="type">Result</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Attempts to modify a value in a root.</p>
@@ -247,13 +250,16 @@ value.</p>
 </td>
 </tr>
 <tr>
-    <th>update</th>
-    <td><code class="type">(inout Value) throws -&gt; Void</code></td>
+    <th>body</th>
+    <td><code class="type">(inout Value) throws -&gt; Result</code></td>
     <td><p>A closure that can mutate the case's associated value. If the closure throws, the root will be left unmodified.</p>
 </td>
 </tr>
   </tbody>
 </table>
+  <h4>Returns</h4>
+  <p>The return value, if any, of the body closure.</p>
+
 </div>
 <div role="article" class="function" id="casepath.appending(path:)">
     <h3>
@@ -436,7 +442,7 @@ value type of another case path.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-07-29T16:27:52+0000">July 29, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-01-02T16:47:23+0000">January 2, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
