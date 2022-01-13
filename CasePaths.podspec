@@ -3,7 +3,8 @@ Pod::Spec.new do |s|
   s.version = "0.8.0"
   s.summary = "Case paths bring the power and ergonomics of key paths to enums!"
 
-  s.description = <<-DESC Case paths bring the power and ergonomics of key paths to enums!
+  s.description = <<-DESC
+  Case paths bring the power and ergonomics of key paths to enums!
   DESC
 
   s.homepage = "https://github.com/ph1ps/swift-case-paths"
